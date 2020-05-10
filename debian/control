@@ -1,0 +1,61 @@
+Source: python-asyncssh
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Vincent Bernat <bernat@debian.org>
+Build-Depends:
+ debhelper-compat (= 12),
+ localehelper,
+ python3-all,
+ python3-sphinx (>= 1.0.7+dfsg-1~),
+ python3-setuptools,
+ python3-crypto,
+ python3-cryptography,
+ python3-bcrypt (>= 3),
+ openssl,
+ openssh-client,
+ dh-python
+Standards-Version: 4.1.1
+Homepage: https://github.com/ronf/asyncssh
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-asyncssh
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-asyncssh.git
+Testsuite: autopkgtest-pkg-python
+
+Package: python3-asyncssh
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Recommends: python-asyncssh-doc, python3-bcrypt (>= 3)
+Description: asyncio-based client and server implementation of SSHv2 protocol
+ AsyncSSH is a Python package which provides an asynchronous client
+ and server implementation of the SSHv2 protocol on top of the Python
+ 3.4+ asyncio framework.
+ .
+ It comes with a full support of SSHv2 and SFTP client and server
+ functions, including shell, command and subsystem channels, direct
+ and forwarded TCP channels, local and remote TCP port forwarding.
+ .
+ Other features include:
+    + Multiple simultaneous sessions on a single SSH connection
+    + Multiple SSH connections in a single event loop
+    + Byte and string based I/O with settable encoding
+    + A variety of key exchange, encryption, and MAC algorithms
+    + Support for gzip compression
+    + Password, public key, and keyboard-interactive user authentication methods
+    + Many types and formats of public keys and certificates
+    + OpenSSH-style known_hosts file support
+    + OpenSSH-style authorized_keys file support
+
+Package: python-asyncssh-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: asyncio-based client and server implementation of SSHv2 protocol (doc)
+ AsyncSSH is a Python package which provides an asynchronous client
+ and server implementation of the SSHv2 protocol on top of the Python
+ 3.4+ asyncio framework.
+ .
+ It comes with a full support of SSHv2 and SFTP client and server
+ functions, including shell, command and subsystem channels, direct
+ and forwarded TCP channels, local and remote TCP port forwarding.
+ .
+ This package contains the HTML docs and examples.

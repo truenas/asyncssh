@@ -1,0 +1,145 @@
+python-asyncssh (2.2.1-1) unstable; urgency=medium
+
+  [ Waqar Ahmed ]
+  * Update version
+
+ -- Waqar Ahmed <waqarsonic1@gmail.com>  Sun, 10 May 2020 20:33:00 +0000
+
+python-asyncssh (1.12.2-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Add missing build dependency on dh-python (Closes: #950066).
+
+ -- Gordon Ball <gordon@chronitis.net>  Thu, 07 May 2020 07:00:36 +0000
+
+python-asyncssh (1.12.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Vincent Bernat <bernat@debian.org>  Thu, 19 Apr 2018 15:02:40 +0200
+
+python-asyncssh (1.12.1-1) unstable; urgency=high
+
+  [ Vincent Bernat ]
+  * New upstream version. Fix CVE-2018-7749.
+  * d/control: add test suite.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove trailing whitespaces
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 16 Mar 2018 09:23:37 +0100
+
+python-asyncssh (1.11.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/patches: remove patches for deprecated ciphers and SSH agent.
+  * d/control: bump Standards-Version.
+
+ -- Vincent Bernat <bernat@debian.org>  Wed, 22 Nov 2017 21:53:30 +0100
+
+python-asyncssh (1.11.0-2) unstable; urgency=medium
+
+  * d/patches: remove tests using deprecated ciphers. Closes: #881096.
+  * d/patches: remove test crashing SSH agent. Closes: #881096.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 11 Nov 2017 21:23:44 +0100
+
+python-asyncssh (1.11.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Refresh patches after git-dpm to gbp pq conversion
+  * d/control: bump Standards-Version.
+  * d/rules: use unittest autodiscovery instead of setup.py to run tests.
+
+ -- Vincent Bernat <bernat@debian.org>  Mon, 18 Sep 2017 12:06:36 +0200
+
+python-asyncssh (1.8.1-2) unstable; urgency=medium
+
+  * Add a patch to fix FTBFS due to agent-related test failure.
+    Closes: #851020.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 21 Jan 2017 21:00:14 +0100
+
+python-asyncssh (1.8.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 08 Jan 2017 17:45:08 +0100
+
+python-asyncssh (1.7.3-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 25 Dec 2016 10:26:41 +0100
+
+python-asyncssh (1.7.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 01 Nov 2016 19:56:17 +0100
+
+python-asyncssh (1.7.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Remove patch to discard errors when invoking ssh-agent.
+
+ -- Vincent Bernat <bernat@debian.org>  Wed, 26 Oct 2016 22:34:02 +0200
+
+python-asyncssh (1.6.2-2) unstable; urgency=medium
+
+  * Avoid any network access during tests by using RES_OPTIONS. Thanks to
+    Jakub Wilk. Closes: #830568.
+  * Add a patch to discard errors when invoking ssh-agent. Closes: #838088.
+  * Ensure Python3 version of sphinx-build is used.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 30 Sep 2016 16:55:39 +0200
+
+python-asyncssh (1.6.2-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Use localehelper to make some tests succeed.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 10 Sep 2016 13:55:59 +0200
+
+python-asyncssh (1.5.6-1) unstable; urgency=medium
+
+  [ Vincent Bernat ]
+  * New upstream release.
+     + Drop patch for disabling unworking tests.
+     + Add a patch to disable tests requiring network access.
+  * d/control: bump Standards-Version.
+  * d/control: require python-bcrypt >= 3 to get KDF-related functions.
+  * d/control: python3-cryptography is an automatic dependency, remove it
+    from Recommends.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 02 Jul 2016 14:10:01 +0200
+
+python-asyncssh (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 31 Oct 2015 23:15:49 +0100
+
+python-asyncssh (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use GitHub in d/watch. Otherwise, we don't get the documentation.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 15 Sep 2015 19:12:48 +0200
+
+python-asyncssh (1.2.0-1) unstable; urgency=low
+
+  * Initial Release. Closes: #793807.
+
+ -- Vincent Bernat <bernat@debian.org>  Mon, 27 Jul 2015 19:25:42 +0200

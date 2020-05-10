@@ -1,0 +1,13 @@
+Document: python-asyncssh
+Title: AsyncSSH Manual
+Author: Ron Frederick
+Abstract: This manual describes AsyncSSH,
+ a Python package which provides an asynchronous client and server
+ implementation of the SSHv2 protocol on top of the Python asyncio
+ framework.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/python-asyncssh-doc/html/index.html
+Files: /usr/share/doc/python-asyncssh-doc/html/*.html
+

@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+# -*- coding: utf-8 -*-
+
+export PYBUILD_NAME = asyncssh
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem pybuild
+
+override_dh_installdocs:
+	PYTHONPATH=. /usr/share/sphinx/scripts/python3/sphinx-build -N -q -E -b html docs/ \
+                debian/python-asyncssh-doc/usr/share/doc/python-asyncssh-doc/html/
+	dh_installdocs
+
+override_dh_auto_test:
+
